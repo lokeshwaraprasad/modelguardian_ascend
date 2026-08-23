@@ -1,0 +1,7 @@
+# Main project dependencies (for test client)
+requests==2.31.0
+numpy==1.24.3
+
+# For backend and monitor, see their respective requirements.txt files:
+# - backend/requirements.txt
+# - monitor/requirements.txt

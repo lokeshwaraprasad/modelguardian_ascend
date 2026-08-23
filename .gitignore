@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model files
+backend/models/*.pkl
+backend/baselines/*.json
+backend/logs/*.jsonl
+monitor/logs/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Process IDs
+pids/
+*.pid
+
+# Docker
+.docker/
+
+# Environment
+.env
+.env.local
+
+# Build
+dashboard/build/
+dashboard/.eslintcache
+
+# Temporary files
+temp_*.json
+*.tmp

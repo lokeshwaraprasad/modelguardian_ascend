@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  model-api:
+    build: .
+    container_name: modelguardian-api
+    ports:
+      - "5000:5000"
+    environment:
+      - MODEL_VERSION=v1
+      - MONITOR_SERVICE_URL=http://monitor:5001
+    volumes:
+      - ./backend/models:/app/models
+      - ./backend/logs:/app/logs
+      - ./backend/baselines:/app/baselines
+    networks:
+      - modelguardian
+
+  monitor:
+    build:
+      context: ./monitor
+      dockerfile: Dockerfile
+    container_name: modelguardian-monitor
+    ports:
+      - "5001:5001"
+    environment:
+      - ROLLBACK_URL=http://model-api:5000/model/reload
+    networks:
+      - modelguardian
+
+networks:
+  modelguardian:
+    driver: bridge
