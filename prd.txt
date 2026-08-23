@@ -1,0 +1,41 @@
+ModelGuardian 82 82
+Title: ModelGuardian 82 82
+
+Background: In high-stakes AI deployments, model drift and adversarial inputs can cause critical failures. A financial trading platform recently suffered a $2M loss due to a subtle shift in a fraud detection model's behavior, undetected for 72 hours. Real-time monitoring is essential, but current tools lack integration with deployment pipelines.
+
+Problem Statement: Your team must build a system that detects and responds to model degradation and adversarial attacks in real time. The system must analyze live inference logs, compare them against baseline behavior, and trigger automated rollback or alerting. The challenge is to build a lightweight, observability-driven pipeline that integrates model monitoring with deployment automation - all within 6 hours.
+
+Scope: Build a system that continuously monitors a deployed ML model's inference behavior, detects anomalies, and triggers rollback or alerting. The system must be integrated with a CI/CD pipeline to support automated recovery.
+
+MVP Scope: • Deploy a sample ML model (e.g., fraud detection) using a REST API • Stream inference logs to a monitoring pipeline • Implement a drift detection algorithm (e.g., KS test or KL divergence) on live data • Trigger rollback via a CI/CD webhook if drift exceeds threshold • Demonstrate rollback via a mock deployment system (e.g., Docker image re-deploy)
+
+Advanced/Bonus Scope: • Add adversarial input detection using a simple classifier or prompt injection test • Integrate with a real-time dashboard showing model health • Support multiple model versions and compare drift across them
+
+Functional Requirements:
+
+Monitor live inference requests to a deployed ML model
+Detect statistical drift in model behavior using real-time data
+Trigger rollback or alert when drift exceeds threshold
+Integrate rollback mechanism with CI/CD pipeline
+Support model version comparison and drift tracking
+Log and display drift events in a dashboard
+Non-Functional Requirements:
+
+Detect drift within 15 seconds of new data arrival
+Rollback system must complete within 30 seconds of alert
+System must handle 100+ inference requests per minute
+Dashboard must update in real time (≤2s latency)
+Constraints:
+
+Must be built in 6 hours
+Only use provided model and data samples
+No external cloud services beyond free-tier CI/CD (e.g., GitHub Actions)
+Rollback must be simulated via script or mock deployment
+No pre-built drift detection libraries - must implement from scratch
+Required skills only: ai-ml, backend, devops.
+Deliverables:
+
+Working model monitoring pipeline with drift detection
+Rollback trigger mechanism integrated with CI/CD
+Live dashboard showing drift alerts and model health
+Demo video showing detection and rollback in action
