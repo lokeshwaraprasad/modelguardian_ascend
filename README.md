@@ -38,6 +38,7 @@ See [QUICKSTART.md](QUICKSTART.md) for more details.
 - [Demo](#-demo)
 - [Documentation](#-documentation)
 - [Performance](#-performance)
+- [Diagrams](#-diagrams)
 - [License](#-license)
 
 ---
@@ -116,6 +117,8 @@ A financial trading platform lost **$2,000,000 in 72 hours** due to undetected m
 1. **Model API** (Flask) - Serves predictions, logs inferences
 2. **Monitor Service** (Flask + SocketIO) - Detects drift, triggers rollback
 3. **Dashboard** (React) - Visualizes health, alerts, metrics
+
+See [DIAGRAMS.md](DIAGRAMS.md) for comprehensive flow diagrams.
 
 ---
 
@@ -239,12 +242,16 @@ See [DEMO.md](DEMO.md) for full demonstration guide with detailed walkthroughs.
 
 | Document | Description |
 |----------|-------------|
-| [QUICKSTART.md](QUICKSTART.md) | Get running in 5 minutes |
+| [GETTING_STARTED.md](GETTING_STARTED.md) | 5-minute quickstart guide |
+| [QUICKSTART.md](QUICKSTART.md) | Essential commands |
 | [SETUP.md](SETUP.md) | Detailed installation & configuration |
 | [DEMO.md](DEMO.md) | Complete feature demonstration guide |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System design & technical details |
+| [DIAGRAMS.md](DIAGRAMS.md) | Visual architecture & flow diagrams |
 | [TROUBLESHOOTING.md](TROUBLESHOOTING.md) | Common issues & solutions |
 | [VIDEO_SCRIPT.md](VIDEO_SCRIPT.md) | Demo video recording guide |
+| [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) | Project completion summary |
+| [INDEX.md](INDEX.md) | Complete file index |
 
 ---
 
@@ -354,14 +361,19 @@ stop.bat
 
 ---
 
-## 📊 Dashboard Features
+## 📊 Diagrams
 
-- **Model Status Card** - Real-time health indicator
-- **Drift Metrics** - KS score & KL divergence
-- **Live Charts** - Drift over time, prediction distribution
-- **Real-time Alerts** - Critical, warning, and info notifications
-- **Event History** - Complete audit trail
-- **Action Buttons** - Generate baseline, reset monitoring, refresh data
+Comprehensive visual diagrams available in [DIAGRAMS.md](DIAGRAMS.md):
+
+- **System Architecture** - Complete component overview
+- **Data Flow - Normal Inference** - Request/response flow
+- **Data Flow - Drift Detection & Rollback** - End-to-end recovery
+- **Component Interaction** - Service communication patterns
+- **Security Flow** - Adversarial detection process
+- **Performance Flow** - Timing and optimization points
+- **Deployment Architecture** - Local, Docker, and production setups
+- **Metrics & Monitoring** - Observability architecture
+- **State Machine** - Model health states and transitions
 
 ---
 
@@ -458,10 +470,12 @@ Built as a demonstration of production-ready ML monitoring system, showcasing:
 - ✅ CI/CD pipeline
 - ✅ Docker deployment
 - ✅ Complete documentation
+- ✅ Comprehensive diagrams
 - ✅ Test client & automation
 
 **Built in:** < 6 hours  
 **Lines of Code:** ~3,500  
+**Files:** 35+  
 **Technologies:** Python, JavaScript, React, Flask, Docker
 
 ---
